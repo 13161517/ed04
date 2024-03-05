@@ -7,13 +7,7 @@ import java.util.List;
  * Clase principal del Script
  */
 class Contacto {
-    /**
-     * variable de nombre de contacto
-     */
     private String name;
-    /**
-     * lista de telefonos
-     */
     private List<String> phones;
 
     /**
@@ -22,12 +16,14 @@ class Contacto {
      * @param phone telefono de contacto
      */
     public Contacto(String name, String phone) {
-        this.name = name;
-        this.phones = new ArrayList<>();
-        this.phones.add(phone);
+        this.setName(name);
+        this.setPhones(new ArrayList<>());
+        this.getPhones().add(phone);
     }
 
     /**
+     * variable de nombre de contacto
+     */ /**
      * acceso a nombre de contacto
      * @return name contacto
      */
@@ -36,10 +32,28 @@ class Contacto {
     }
 
     /**
+     * lista de telefonos
+     */ /**
      * acceso a telefonos de contacto
      * @return phones contacto
      */
     public List<String> getPhones() {
         return this.phones;
+    }
+
+    /**
+     * modificar nombre contacto
+     * @param name nombre contacto
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * modificar telefono contacto
+     * @param phones telefono contacto
+     */
+    public void setPhones(List<String> phones) {
+        this.phones = phones;
     }
 }
