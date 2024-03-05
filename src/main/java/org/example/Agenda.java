@@ -2,13 +2,29 @@ package org.example;
 
 import java.util.*;
 
+/**
+ * Clase principal script
+ * @author Francisco Antonio Perez
+ * @version 1
+ */
 public class Agenda {
+    /**
+     * lista de contactos
+     */
     private List<Contacto> contacts; // Lista de Contacto
 
+    /**
+     * constructor de clase
+     */
     public Agenda() {
         this.contacts = new ArrayList<>();
     }
 
+    /**
+     * añadir contacto
+     * @param name nombre contacto
+     * @param phone telefono contacto
+     */
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Contacto c : contacts) {
@@ -25,6 +41,10 @@ public class Agenda {
         }
     }
 
+    /**
+     * eliminar contacto
+     * @param name nombre contacto
+     */
     public void removeContact(String name) {
         Iterator<Contacto> it = contacts.iterator();
 
@@ -37,6 +57,12 @@ public class Agenda {
         }
     }
 
+    /**
+     * modificar telefono de contacto
+     * @param name nombre de contacto
+     * @param oldPhone telefono antiguo
+     * @param newPhone telefono nuevo
+     */
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Contacto c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
@@ -51,6 +77,10 @@ public class Agenda {
         }
     }
 
+    /**
+     * Acceso a contactos
+     * @return contactos
+     */
     public List<Contacto> getContacts() {
         return this.contacts;
     }
