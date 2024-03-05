@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Clase principal del Script
  */
-class Contacto {
+class Persona {
     private String name;
     private List<String> phones;
 
@@ -15,7 +15,7 @@ class Contacto {
      * @param name nombre de contacto
      * @param phone telefono de contacto
      */
-    public Contacto(String name, String phone) {
+    public Persona(String name, String phone) {
         this.setName(name);
         this.setPhones(new ArrayList<>());
         this.getPhones().add(phone);
